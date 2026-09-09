@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Registro de PTAR</title>
+
+    <link
+        rel="stylesheet"
+        href="styles.css"
+    >
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <div class="contenedor">
+
+            <h1>Registro de PTAR</h1>
+
+            <p>
+                Sistema básico de registro de Plantas de Tratamiento
+                de Aguas Residuales
+            </p>
+
+        </div>
+    </header>
+
+
+    <main class="contenedor">
+
+        <!-- KPI -->
+
+        <section class="kpis">
+
+            <div class="kpi">
+
+                <span class="kpi-titulo">
+                    PTAR registradas
+                </span>
+
+                <strong
+                    id="totalPTAR"
+                    class="kpi-numero"
+                >
+                    0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- FORMULARIO -->
+
+        <section class="tarjeta">
+
+            <h2>
+                Registrar PTAR
+            </h2>
+
+            <form id="formPTAR">
+
+                <div class="grid-formulario">
+
+                    <div class="campo">
+
+                        <label for="nombre">
+                            Nombre de la PTAR
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="departamento">
+                            Departamento
+                        </label>
+
+                        <select
+                            id="departamento"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccionar
+                            </option>
+
+                            <option value="Puno">
+                                Puno
+                            </option>
+
+                            <option value="Junín">
+                                Junín
+                            </option>
+
+                            <option value="Cajamarca">
+                                Cajamarca
+                            </option>
+
+                            <option value="La Libertad">
+                                La Libertad
+                            </option>
+
+                            <option value="Lambayeque">
+                                Lambayeque
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="prestador">
+                            Tipo de prestador
+                        </label>
+
+                        <select
+                            id="prestador"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccionar
+                            </option>
+
+                            <option value="Municipalidad">
+                                Municipalidad
+                            </option>
+
+                            <option value="JASS">
+                                JASS
+                            </option>
+
+                            <option value="EPS">
+                                EPS
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="estado">
+                            Estado
+                        </label>
+
+                        <select
+                            id="estado"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccionar
+                            </option>
+
+                            <option value="Operativa">
+                                Operativa
+                            </option>
+
+                            <option value="Inoperativa">
+                                Inoperativa
+                            </option>
+
+                            <option value="Parcialmente operativa">
+                                Parcialmente operativa
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="boton-principal"
+                >
+                    Registrar PTAR
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- TABLA -->
+
+        <section class="tarjeta">
+
+            <div class="cabecera-tabla">
+
+                <h2>
+                    PTAR registradas
+                </h2>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>#</th>
+                            <th>PTAR</th>
+                            <th>Departamento</th>
+                            <th>Prestador</th>
+                            <th>Estado</th>
+                            <th>Acción</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="tablaPTAR">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
